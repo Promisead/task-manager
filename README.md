@@ -71,20 +71,72 @@ cd backend
 npm install
 ```
 
-Create a `.env` file in the `/backend` folder:
+#### 🔧 Create Environment File
+
+Create a `.env` file in the `/backend` directory with the following content:
 
 ```env
 PORT=5000
 MONGO_URI=mongodb://localhost:27017/taskmanager
 ```
 
-Then start the server:
+> ✅ If you're using **MongoDB Atlas**, replace `MONGO_URI` with your connection string. Example:
+>
+> ```env
+> MONGO_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/taskmanager?retryWrites=true&w=majority
+> ```
+
+#### 📁 Backend Folder Structure Explained
+
+```
+backend/
+├── src/
+│   ├── server.js              # Entry point of the Express app
+│   ├── models/
+│   │   └── Task.js            # Mongoose model for Task schema
+│   ├── controllers/
+│   │   └── taskController.js  # Logic for CRUD operations
+│   └── routes/
+│       └── taskRoutes.js      # API routes for task endpoints
+├── .env                       # Environment variables
+├── package.json
+```
+
+#### 🔄 Start MongoDB Locally
+
+Ensure MongoDB is installed and running locally:
+
+```bash
+# For Linux/macOS
+sudo service mongod start
+
+# For Windows (via MongoDB Compass or MongoDB Community Edition)
+```
+
+#### ▶️ Start the Backend Server
+
+Use nodemon for development:
 
 ```bash
 npm run dev
 ```
 
-> Make sure MongoDB is running locally, or replace the URI with your Atlas connection string.
+Or run directly with Node:
+
+```bash
+node src/server.js
+```
+
+The API should now be running at: [http://localhost:5000](http://localhost:5000)
+
+#### ✅ Available API Endpoints
+
+| Method | Endpoint         | Description           |
+|--------|------------------|-----------------------|
+| GET    | /api/tasks       | Get all tasks         |
+| POST   | /api/tasks       | Add a new task        |
+| PUT    | /api/tasks/:id   | Update a task by ID   |
+| DELETE | /api/tasks/:id   | Delete a task by ID   |
 
 ---
 
@@ -163,4 +215,4 @@ MIT License – feel free to use and modify!
 
 ## 👤 Author
 
-Developed by [PROMISE DUKE](https://github.com/promisead)
+ Developed by [PROMISE DUKE](https://github.com/promisead)
