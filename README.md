@@ -15,15 +15,15 @@ A full-stack task management application built using **React**, **Express.js**, 
 
 ### 💻 Laptop View
 
-![Laptop View](./task_image_laptop.jpg)
+![Laptop View](./readme_files/task_image_laptop.jpg)
 
 ### 📱 Tablet View
 
-![Tablet View](./task_image_tab.jpg)
+![Tablet View](./readme_files/task_image_tab.jpg)
 
 ### 📞 Mobile View
 
-![Mobile View](./task_image_mobile.jpg)
+![Mobile View](./readme_files/task_image_mobile.jpg)
 
 ---
 
